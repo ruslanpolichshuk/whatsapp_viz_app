@@ -1,19 +1,19 @@
 # 💬 WhatsApp Chat Visualizer
 
-Веб-приложение для визуализации экспортированных чатов WhatsApp с поддержкой медиафайлов.
+A web application for visualizing exported WhatsApp chats with media file support.
 
-## 🚀 Возможности
+## 🚀 Features
 
-- **Чтение чатов** из папок с экспортированными данными WhatsApp
-- **Визуализация сообщений** в стиле WhatsApp (зеленые/белые пузыри)
-- **Воспроизведение аудио** прямо в чате
-- **Просмотр изображений и видео** в модальных окнах
-- **Поиск по сообщениям** с поддержкой регулярных выражений
-- **Фильтрация** по датам, участникам, типу сообщений
-- **Статистика** активности и графики
-- **Пагинация** для больших чатов
+- **Read chats** from folders with exported WhatsApp data
+- **Message visualization** in WhatsApp style (green/white bubbles)
+- **Audio playback** directly in chat
+- **Image and video viewing** in modal windows
+- **Message search** with regex support
+- **Filtering** by dates, participants, message types
+- **Activity statistics** and charts
+- **Pagination** for large chats
 
-## 📋 Требования
+## 📋 Requirements
 
 - Python 3.8+
 - Streamlit
@@ -22,15 +22,15 @@
 - python-dateutil
 - regex
 
-## 🛠️ Установка
+## 🛠️ Installation
 
-1. **Клонируйте репозиторий:**
+1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd whatsapp-chat-reader
+   git clone https://github.com/ruslanpolichshuk/whatsapp_viz_app.git
+   cd whatsapp_viz_app
    ```
 
-2. **Создайте виртуальное окружение:**
+2. **Create a virtual environment:**
    ```bash
    python -m venv .venv
    
@@ -41,86 +41,86 @@
    source .venv/bin/activate
    ```
 
-3. **Установите зависимости:**
+3. **Install dependencies:**
    ```bash
    pip install streamlit pandas altair python-dateutil regex
    ```
 
-## 📱 Экспорт чата из WhatsApp
+## 📱 Exporting chat from WhatsApp
 
-1. Откройте WhatsApp на телефоне
-2. Перейдите в нужный чат
-3. Нажмите на название чата → **Экспорт чата**
-4. Выберите **"Включить медиафайлы"**
-5. Отправьте файл себе (например, по email)
-6. Распакуйте ZIP-архив в папку
+1. Open WhatsApp on your phone
+2. Go to the desired chat
+3. Tap on the chat name → **Export chat**
+4. Select **"Include media files"**
+5. Send the file to yourself (e.g., via email)
+6. Extract the ZIP archive to a folder
 
-## 🎯 Запуск приложения
+## 🎯 Running the application
 
 ```bash
 streamlit run whatsapp_viz_app.py
 ```
 
-Приложение откроется в браузере по адресу `http://localhost:8501`
+The application will open in your browser at `http://localhost:8501`
 
-## 📁 Использование
+## 📁 Usage
 
-### 1. Выбор папки с чатом
+### 1. Selecting chat folder
 
-- Введите путь к папке с экспортированным чатом в поле **"Enter folder path"**
-- Или используйте кнопки:
-  - **💡 Show common paths** - показать типичные пути
-  - **🔍 Auto-detect in Downloads** - автоматический поиск в папке Downloads
-  - **📁 Browse for Chat Folder** - инструкция по копированию пути
+- Enter the path to the folder with the exported chat in the **"Enter folder path"** field
+- Or use the buttons:
+  - **💡 Show common paths** - show typical paths
+  - **🔍 Auto-detect in Downloads** - automatic search in Downloads folder
+  - **📁 Browse for Chat Folder** - instructions for copying the path
 
-### 2. Настройка просмотра
+### 2. View settings
 
-- **Which user is 'me'** - выберите ваше имя для правильного отображения сообщений
-- **Messages per page** - количество сообщений на странице (10-1000 или "All")
-- **Page** - переход между страницами для больших чатов
+- **Which user is 'me'** - select your name for correct message display
+- **Messages per page** - number of messages per page (10-1000 or "All")
+- **Page** - navigate between pages for large chats
 
-### 3. Поиск и фильтры
+### 3. Search and filters
 
-- **Search text** - поиск по содержимому сообщений
-- **Include system messages** - показывать системные сообщения
-- **Participants** - фильтр по участникам чата
-- **Date range** - фильтр по датам
+- **Search text** - search message content
+- **Include system messages** - show system messages
+- **Participants** - filter by chat participants
+- **Date range** - filter by dates
 
-## 🎵 Поддерживаемые медиафайлы
+## 🎵 Supported media files
 
-### Аудио
-- **Форматы:** .opus, .mp3, .wav, .m4a, .ogg
-- **Воспроизведение:** прямо в чате с полным контролем громкости
+### Audio
+- **Formats:** .opus, .mp3, .wav, .m4a, .ogg
+- **Playback:** directly in chat with full volume control
 
-### Видео
-- **Форматы:** .mp4, .avi, .mov, .webm
-- **Просмотр:** в модальном окне по клику
+### Video
+- **Formats:** .mp4, .avi, .mov, .webm
+- **Viewing:** in modal window on click
 
-### Изображения
-- **Форматы:** .jpg, .jpeg, .png, .gif, .webp
-- **Просмотр:** увеличенное изображение в модальном окне
+### Images
+- **Formats:** .jpg, .jpeg, .png, .gif, .webp
+- **Viewing:** enlarged image in modal window
 
-### Другие файлы
-- **Скачивание:** прямая ссылка для скачивания
+### Other files
+- **Download:** direct download link
 
-## 📊 Статистика и графики
+## 📊 Statistics and charts
 
-- **Общее количество сообщений**
-- **Количество участников**
-- **Покрытые дни**
-- **Количество медиафайлов**
-- **График сообщений по дням**
-- **Тепловая карта активности** (день недели × час)
+- **Total message count**
+- **Number of participants**
+- **Days covered**
+- **Media file count**
+- **Daily message chart**
+- **Activity heatmap** (weekday × hour)
 
-## ⚙️ Настройки
+## ⚙️ Configuration
 
-### Увеличение лимита загрузки файлов
+### Increasing file upload limit
 
-Создайте файл `.streamlit/config.toml`:
+Create `.streamlit/config.toml` file:
 
 ```toml
 [server]
-maxUploadSize = 2000  # 2 ГБ
+maxUploadSize = 2000  # 2 GB
 
 [theme]
 primaryColor = "#FF6B6B"
@@ -129,81 +129,81 @@ secondaryBackgroundColor = "#F0F2F6"
 textColor = "#262730"
 ```
 
-## 🔧 Поддерживаемые форматы экспорта
+## 🔧 Supported export formats
 
 ### Android
 ```
-01.01.2024, 12:34 - Имя: Сообщение
+01.01.2024, 12:34 - Name: Message
 ```
 
 ### iOS
 ```
-[01.01.2024, 12:34] Имя: Сообщение
+[01.01.2024, 12:34] Name: Message
 ```
 
-### Новый формат
+### New format
 ```
-[10/1/25, 11:58:38] ~Имя: Сообщение
+[10/1/25, 11:58:38] ~Name: Message
 ```
 
-## 🐛 Решение проблем
+## 🐛 Troubleshooting
 
-### Пустая папка чата
-- Убедитесь, что в папке есть файл `_chat.txt`
-- Проверьте, что папка содержит медиафайлы
+### Empty chat folder
+- Make sure the folder contains `_chat.txt` file
+- Check that the folder contains media files
 
-### Аудио не воспроизводится
-- Проверьте формат файла (поддерживаются .opus, .mp3, .wav, .m4a, .ogg)
-- Убедитесь, что файл не поврежден
+### Audio not playing
+- Check file format (supported: .opus, .mp3, .wav, .m4a, .ogg)
+- Ensure the file is not corrupted
 
-### Медленная загрузка
-- Используйте пагинацию (меньше сообщений на странице)
-- Отключите системные сообщения
-- Применяйте фильтры по датам
+### Slow loading
+- Use pagination (fewer messages per page)
+- Disable system messages
+- Apply date filters
 
-### Ошибки кодировки
-- Убедитесь, что файл `_chat.txt` сохранен в UTF-8
-- Проверьте наличие специальных символов в именах файлов
+### Encoding errors
+- Ensure `_chat.txt` file is saved in UTF-8
+- Check for special characters in file names
 
-## 📝 Примеры использования
+## 📝 Usage examples
 
-### Поиск сообщений
+### Message search
 ```
-# Поиск по ключевым словам
-"важное сообщение"
+# Search by keywords
+"important message"
 
-# Поиск по дате (в тексте)
+# Search by date (in text)
 "2024"
 
-# Поиск медиафайлов
+# Search media files
 "attached:"
 ```
 
-### Фильтрация
-- **Только мои сообщения:** выберите себя в "Which user is 'me'"
-- **Конкретный период:** установите диапазон дат
-- **Без системных сообщений:** снимите галочку "Include system messages"
+### Filtering
+- **Only my messages:** select yourself in "Which user is 'me'"
+- **Specific period:** set date range
+- **Without system messages:** uncheck "Include system messages"
 
-## 🤝 Вклад в проект
+## 🤝 Contributing
 
-1. Форкните репозиторий
-2. Создайте ветку для новой функции
-3. Внесите изменения
-4. Создайте Pull Request
+1. Fork the repository
+2. Create a branch for new feature
+3. Make changes
+4. Create a Pull Request
 
-## 📄 Лицензия
+## 📄 License
 
 MIT License
 
-## 🆘 Поддержка
+## 🆘 Support
 
-Если у вас возникли проблемы:
+If you encounter issues:
 
-1. Проверьте [раздел решения проблем](#-решение-проблем)
-2. Создайте Issue в репозитории
-3. Приложите пример экспортированного чата (без личных данных)
+1. Check the [troubleshooting section](#-troubleshooting)
+2. Create an Issue in the repository
+3. Attach an example of exported chat (without personal data)
 
 ---
 
-**Версия:** 0.1  
-**Последнее обновление:** 2024
+**Version:** 0.1  
+**Last updated:** 2024
